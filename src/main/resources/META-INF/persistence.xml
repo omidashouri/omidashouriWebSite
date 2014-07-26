@@ -5,6 +5,16 @@
     <jta-data-source>jdbc/omidashouriJNDI</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
+        <!--<property name="javax.persistence.schema-generation.database.action" value="none"/>-->
+      <property name="hibernate.archive.autodetection" value="class"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/omidashouridb?zeroDateTimeBehavior=convertToNull"/>
+      <property name="hibernate.connection.username" value="root"/>
+      <property name="hibernate.connection.password" value="Ashouri@5205"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update" /> 
     </properties>
   </persistence-unit>
 </persistence>
