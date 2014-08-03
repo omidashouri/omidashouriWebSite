@@ -3,12 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>A web page that points a browser to a different page after 2 seconds</title>
+        <meta http-equiv="refresh" content="0; URL=pages/main/mainTemplate.xhtml"></meta>
+        <meta name="keywords" content="automatic redirection"></meta>
     </h:head>
-    <h:body>
-        Hello from Facelets
-        <br />
-        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
-    </h:body>
+        <h:body>
+            If your browser doesn't automatically go there within a few seconds, 
+            you may want to go to 
+            <a href="http://www.pa.msu.edu/services/computing/">the destination</a> 
+            manually.
+        </h:body>
 </html>
-

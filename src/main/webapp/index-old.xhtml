@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <h:form>
+        Hello from Facelets
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+        <br/>
+        <h:link outcome="pages/main/mainTemplate.xhtml" value="Main Template" />
+        <br/>
+        <a href="pages/first/login.xhtml">sssssssss</a>
+        <br/>
+       
+        <p:link value="Views" onclick="dlg.show()"/>
+        <br/>
+        <p:dialog widgetVar="dlg">
+            <p:outputLabel value="this is test"/>
+        </p:dialog>
+        <br/>
+        <p:commandButton value="View" icon="ui-icon-extlink"  onclick="PF('dlg').show()"/>
+        </h:form>
+    </h:body>
+
+
+</html>
+
