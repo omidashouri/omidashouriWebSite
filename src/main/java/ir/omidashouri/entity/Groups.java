@@ -17,6 +17,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -28,6 +29,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "tbl_groups")
+//@SequenceGenerator(name = "SEQ_Gro",sequenceName = "GEN_Gro",initialValue = 1,allocationSize = 1)
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Groups.findAll", query = "SELECT g FROM Groups g"),
@@ -36,6 +38,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Groups implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "SEQ_Gro")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
