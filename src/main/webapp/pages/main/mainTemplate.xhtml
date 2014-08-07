@@ -90,19 +90,7 @@
             </p:layoutUnit>  
 
             <p:layoutUnit position="east" size="200" header="" resizable="true" closable="false" collapsible="false" effect="drop" style="text-align:center;">  
-                <ui:fragment rendered="#{empty request.remoteUser}">
-
-
-                    <p:commandButton  value="LogIn" type="button" onclick="PF('dlgMpWv').show()"/>
-                </ui:fragment>
-
-                <ui:fragment rendered="#{not empty request.remoteUser}">
-                    <p>This is only rendered when someone's been logged in.</p>
-                    <p>Welcome, you're logged in as #{request.remoteUser}!</p>
-                    <h:form>
-                        <p:commandButton value="LogOut" action="#{loginBean.logout()}" />
-                    </h:form>
-                </ui:fragment>
+        
 
                 <ui:insert name="eastBody" >
                     <ui:include src="/pages/main/east.xhtml"/>
@@ -116,7 +104,7 @@
                     </h:form>
                     <h:form>
                         <p:dialog id="dlgMpId" widgetVar="dlgMpWv" showEffect="bounce" hideEffect="explode" >
-                            <h:panelGrid columns="2" styleClass="loginPanelGrid">
+                            <p:panelGrid columns="2" styleClass="loginPanelGrid">
                                 <f:facet name="header">
                                     LogIn Form
                                 </f:facet>
@@ -124,8 +112,11 @@
                                 <p:inputText id="usernameTxt" value="#{loginBean.username}" required="true"/>
                                 <p:outputLabel id="passwordInput" value="PassWord : " for="@next"/>
                                 <p:inputText id="passwordTxt" value="#{loginBean.password}" required="true" />
-                                <p:commandButton value="Submit" action="#{loginBean.login}"/>
-                            </h:panelGrid>
+                                <f:facet name="footer">
+                                    <p:commandButton value="Submit" action="#{loginBean.login}"/>
+                                    <p:commandButton type="reset" value="Rest"/>
+                                </f:facet>
+                            </p:panelGrid>
                         </p:dialog>
                     </h:form>
                 </ui:insert>
