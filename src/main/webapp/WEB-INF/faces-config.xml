@@ -16,4 +16,17 @@
         </view-handler>
     </application>
     
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+<!--            <redirect>
+                <view-param>
+                    <name>param</name>
+                    <value>bar</value>
+                </view-param>
+            </redirect>-->
+        </navigation-case>
+    </navigation-rule>
+    
 </faces-config>

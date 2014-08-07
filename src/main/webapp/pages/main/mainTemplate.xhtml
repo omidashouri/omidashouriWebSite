@@ -67,6 +67,10 @@
             .inpea-outputtext {
                 font-size: 11px;
             }
+
+            .loginPanelGrid tr, .loginPanelGrid td {
+                border: none;
+            }
         </style>
     </h:head>
     <h:body>
@@ -87,12 +91,17 @@
 
             <p:layoutUnit position="east" size="200" header="" resizable="true" closable="false" collapsible="false" effect="drop" style="text-align:center;">  
                 <ui:fragment rendered="#{empty request.remoteUser}">
-                    
+
+
+                    <p:commandButton  value="LogIn" type="button" onclick="PF('dlgMpWv').show()"/>
                 </ui:fragment>
 
                 <ui:fragment rendered="#{not empty request.remoteUser}">
                     <p>This is only rendered when someone's been logged in.</p>
                     <p>Welcome, you're logged in as #{request.remoteUser}!</p>
+                    <h:form>
+                        <p:commandButton value="LogOut" action="#{loginBean.logout()}" />
+                    </h:form>
                 </ui:fragment>
 
                 <ui:insert name="eastBody" >
@@ -104,6 +113,20 @@
                 <ui:insert name="mainBody" >
                     <h:form>
                         <p:commandButton value="View" icon="ui-icon-extlink"  actionListener="#{loginView.viewLoginPage()}" />
+                    </h:form>
+                    <h:form>
+                        <p:dialog id="dlgMpId" widgetVar="dlgMpWv" showEffect="bounce" hideEffect="explode" >
+                            <h:panelGrid columns="2" styleClass="loginPanelGrid">
+                                <f:facet name="header">
+                                    LogIn Form
+                                </f:facet>
+                                <p:outputLabel id="usernamelbl" value="UserName : " for="@next"/>
+                                <p:inputText id="usernameTxt" value="#{loginBean.username}" required="true"/>
+                                <p:outputLabel id="passwordInput" value="PassWord : " for="@next"/>
+                                <p:inputText id="passwordTxt" value="#{loginBean.password}" required="true" />
+                                <p:commandButton value="Submit" action="#{loginBean.login}"/>
+                            </h:panelGrid>
+                        </p:dialog>
                     </h:form>
                 </ui:insert>
             </p:layoutUnit>  

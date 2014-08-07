@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
+import javax.faces.application.NavigationHandler;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.ServletException;
@@ -56,10 +57,14 @@ public class LoginBean {
       context.addMessage(null, new FacesMessage("Login failed."));
       return "loginerror";
     }
-    return "admins/index";
+      System.out.println("LogIn Success");
+//    return "admins/index";
+//      return "/foo.xhtml?faces-redirect=true&param=bar";  <<<<<<<<<example
+//      return "success";
+      return "mainTemplate?faces-redirect=true";
   }
 
-  public void logout() {
+  public String logout() {
     FacesContext context = FacesContext.getCurrentInstance();
     HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
     try {
@@ -68,9 +73,14 @@ public class LoginBean {
       log.log(Level.SEVERE, "Failed to logout user!", e);
       context.addMessage(null, new FacesMessage("Logout failed."));
     }
+    return "mainTemplate?faces-redirect=true";
   }
   
+//    public void someEventListener(SomeEvent event) { // AjaxBehaviorEvent or ComponentSystemEvent or even just argumentless.
+//
+//      FacesContext context = FacesContext.getCurrentInstance();
+//        NavigationHandler navigationHandler = context.getApplication().getNavigationHandler();
+//      navigationHandler.handleNavigation(context, null, "success");
+//  }
   
-  
-  
-}
+  }
