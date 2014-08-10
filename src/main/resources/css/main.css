@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 10, 2014, 10:19:47 PM
+    Author     : omid
+*/
+
+.ui-widget,
+.ui-widget .ui-widget {
+    font-size: 11px !important;
+    font-family:tahoma,arial;
+}
+
+.ui-menu .ui-menuitem-text {
+    float: right;
+}
+body { 
+    direction: rtl;
+}
+.ui-menu .ui-widget-header h1, .ui-menu .ui-widget-header h2, .ui-menu .ui-widget-header h3, .ui-menu .ui-widget-header h4, .ui-menu .ui-widget-header h5, .ui-menu .ui-widget-header h6 {
+    display: block;
+    float: right;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 0.3em 3%;
+    width:95%;
+    text-align:center;
+}
+.ui-tabs .ui-tabs-nav li {
+    float: right;
+    list-style: none outside none;
+    margin: 0 0.2em 1px 0;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+}
+.ui-selectonemenu .ui-selectonemenu-label {
+    border: medium none;
+    display: block;
+    float: left;
+    font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-align:left;
+}
+.ui-menu .ui-menuitem-link .ui-menuitem-icon {
+    display: inline-block;
+    float: right;
+}
+.ui-menu .ui-menuitem-text {
+    float: right;
+}
+.ui-outputlabel {
+    font-size: 11px;
+}
+.ui-wizard-step-title {
+    float: right;
+    font-size:.8em;
+    margin: 0 3px 0 0;
+    padding: 0.4em;
+}
+.ui-dt-c{
+    font-size:.7em;
+    text-align:center;
+}
+.inpea-outputtext {
+    font-size: 11px;
+}
+
+.loginPanelGrid tr, .loginPanelGrid td {
+    border: none;
+}

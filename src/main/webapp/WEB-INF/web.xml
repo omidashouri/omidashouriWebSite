@@ -37,7 +37,7 @@
     </session-config>
     <!-- Welcome page -->
     <welcome-file-list>
-        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>index-old.xhtml</welcome-file>
     </welcome-file-list>
     <error-page>
         <error-code>403</error-code>
