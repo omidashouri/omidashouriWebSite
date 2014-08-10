@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -80,5 +81,7 @@ public class UserPreferences implements Serializable {
     public void saveUserTheme() {
         //logic to update the user preferred theme name in DB
         System.out.println("User Theme will be saved in data Base");
+        String contextpath = FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath();
+        System.out.println("Context Path is : "+ contextpath);
     }
 }

@@ -90,7 +90,7 @@
             </p:layoutUnit>  
 
             <p:layoutUnit position="east" size="200" header="" resizable="true" closable="false" collapsible="false" effect="drop" style="text-align:center;">  
-        
+
 
                 <ui:insert name="eastBody" >
                     <ui:include src="/pages/main/east.xhtml"/>
@@ -101,8 +101,17 @@
                 <ui:insert name="mainBody" >
                     <h:form>
                         <p:commandButton value="View" icon="ui-icon-extlink"  actionListener="#{loginView.viewLoginPage()}" />
+                        <br/>
+                        <h:outputText id="tt" value="#{msg['user.id']}"/>
+                        <h:panelGrid columns="2"> 
+                            Language : 
+                            <h:selectOneMenu value="#{localData.locale}" onchange="submit()"
+                                             valueChangeListener="#{localData.localeChanged}">
+                                <f:selectItems value="#{localData.countries}" /> 
+                            </h:selectOneMenu> 
+                        </h:panelGrid> 
                     </h:form>
-                    <h:form>
+                    <h:form >
                         <p:dialog id="dlgMpId" widgetVar="dlgMpWv" showEffect="bounce" hideEffect="explode" >
                             <p:panelGrid columns="2" styleClass="loginPanelGrid">
                                 <f:facet name="header">

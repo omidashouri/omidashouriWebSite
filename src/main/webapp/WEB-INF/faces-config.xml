@@ -15,12 +15,27 @@
             org.primefaces.application.DialogViewHandler
         </view-handler>
     </application>
-    
+    <!--    <application>      
+        <resource-bundle>  
+            <base-name>ir.omidashouri.messages</base-name>  
+            <var>msg</var>  
+        </resource-bundle> 
+    </application>-->
+    <application>
+        <locale-config>
+            <default-locale>fa</default-locale>
+            <supported-locale>en</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>ir.omidashouri.messages</base-name>
+            <var>msg</var>
+        </resource-bundle>
+    </application>  
     <navigation-rule>
         <navigation-case>
             <from-outcome>success</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
-<!--            <redirect>
+            <!--            <redirect>
                 <view-param>
                     <name>param</name>
                     <value>bar</value>
