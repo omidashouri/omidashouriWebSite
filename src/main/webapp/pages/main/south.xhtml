@@ -6,35 +6,32 @@
 
     <h:body>
 
-        <table style="border-color: #000000; background-color:#A8A8A8; border: 2px; width:100%; height: 100%; " >
-            <tr>
-                <td>
-                    <!--<td  width="200" align="center">-->
-                    <!--<FONT style="font-size: 12px; font-family: tahoma,arial;">-->
-                    <ui:fragment rendered="#{empty request.remoteUser}">
-                        <p:commandButton  value="LogIn" type="button" onclick="PF('dlgMpWv').show()"/>
-                    </ui:fragment>
+        <h:form>
+            <!--<td  width="200" align="center">-->
+            <!--<FONT style="font-size: 12px; font-family: tahoma,arial;">-->
+            <ui:fragment rendered="#{empty request.remoteUser}">
+                <p:commandButton  value="LogIn" type="button" onclick="PF('dlgMpWv').show()"/>
+            </ui:fragment>
 
-                    <ui:fragment rendered="#{not empty request.remoteUser}">
-                        <p>This is only rendered when someone's been logged in.</p>
-                        <p>Welcome, you're logged in as #{request.remoteUser}!</p>
-                        <h:form>
-                            <p:commandButton value="LogOut" action="#{loginBean.logout()}" />
-                        </h:form>
-                    </ui:fragment>
-                    <p:spacer width="20" />
-                    <h:outputText value="کاربر: امید عاشوری" style="background-color:lightgray;height: 100%;width: 100%;-moz-border-radius: 10px 10px 10px 10px;border-radius: 10px 10px 10px 10px;"/>
-                    <!--</FONT>-->
-                    <!--</td>-->
-                    <!--<td  align="center">-->
-                    <!--<FONT style="font-size: 12px; font-family: tahoma,arial;">-->
-                    تمامی حقوق این سایت متعلق به امید عاشوری می باشد.
-                    <!--</FONT>-->
-                    <!--</td>-->
-                    <!--<td width="200" align="center">-->
-                    <!--</td>-->
-                </td>
-            </tr>
-        </table>   
+            <ui:fragment rendered="#{not empty request.remoteUser}">
+                <p>This is only rendered when someone's been logged in.</p>
+                <p>Welcome, you're logged in as #{request.remoteUser}!</p>
+
+                <p:commandButton value="LogOut" action="#{loginBean.logout()}" />
+
+            </ui:fragment>
+            <p:spacer width="20" />
+            <h:outputText value="کاربر: امید عاشوری" style="background-color:lightgray;height: 100%;width: 100%;-moz-border-radius: 10px 10px 10px 10px;border-radius: 10px 10px 10px 10px;"/>
+            <!--</FONT>-->
+            <!--</td>-->
+            <!--<td  align="center">-->
+            <!--<FONT style="font-size: 12px; font-family: tahoma,arial;">-->
+            تمامی حقوق این سایت متعلق به امید عاشوری می باشد.
+            <!--</FONT>-->
+            <!--</td>-->
+            <!--<td width="200" align="center">-->
+            <!--</td>-->
+
+        </h:form>
     </h:body>
 </html>

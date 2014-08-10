@@ -5,50 +5,40 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
     <h:body>
-        <table style="border-color: #000000; background-color:#A8A8A8; border: 2px; width:100%; height: 100%; " >
-            <tr>
-                <td width="40%" align="center">
-                    <p:themeSwitcher style="width:165px">
-                        <f:selectItem itemLabel="Choose Theme" itemValue="" />
-                        <f:selectItems value="#{userPreferences.themes}" />
-                        <p:ajax listener="#{userPreferences.saveUserTheme}"/>
-                    </p:themeSwitcher>
-                    <br/>
-                    <!--                    <p:themeSwitcher id="advanced" style="width:165px" effect="fade" var="t">
-                                            <f:selectItem itemLabel="Choose Theme" itemValue="" />
-                                            <f:selectItems value="[afterdark, afternoon, afterwork, aristo, black-tie, blitzer, bluesky, bootstrap, casablanca, cupertino, cruze, dark-hive, delta, dot-luv, eggplant, excite-bike, flick, glass-x, home, hot-sneaks, humanity, le-frog, metroui, midnight, mint-choc, overcast, pepper-grinder, redmond, rocket, sam, smoothness, south-street, start, sunny, swanky-purse, trontastic, ui-darkness, ui-lightness, vader]" var="theme" itemLabel="" itemValue="" />
-                    
-                                            <p:column>
-                                                <h:outputText styleClass="ui-theme ui-theme-" style="display-block" />
-                                            </p:column>
-                    
-                                            <p:column>
-                    
-                                            </p:column>
-                                        </p:themeSwitcher>-->
-                    <br/>
-                    <p:themeSwitcher value="#{userPreferences.selectedTheme}"
-                                     style="width:180px" var="theme">
-                        <f:selectItem itemLabel="Select Theme" itemValue="" />
-                        <f:selectItems value="#{userPreferences.themes}" var="t"
-                                       itemLabel="#{t.name}" itemValue="#{t}"/>
-                        <p:ajax listener="#{userPreferences.saveUserTheme}"/>
-                        <p:column>
-                            #{theme.displayName}
-                        </p:column>
-                        <p:column>
-                            <!--<p:graphicImage value="/resources/images/themes/{theme.name}"/>-->
-                        </p:column>
-                    </p:themeSwitcher>
-                    
-                </td>
-                <td width="20%" align="center">
+        <h:form>
+            <p:themeSwitcher style="width:165px">
+                <f:selectItem itemLabel="Choose Theme" itemValue="" />
+                <f:selectItems value="#{userPreferences.themes}" />
+                <p:ajax listener="#{userPreferences.saveUserTheme}"/>
+            </p:themeSwitcher>
+            <br/>
+            <!--                    <p:themeSwitcher id="advanced" style="width:165px" effect="fade" var="t">
+                                    <f:selectItem itemLabel="Choose Theme" itemValue="" />
+                                    <f:selectItems value="[afterdark, afternoon, afterwork, aristo, black-tie, blitzer, bluesky, bootstrap, casablanca, cupertino, cruze, dark-hive, delta, dot-luv, eggplant, excite-bike, flick, glass-x, home, hot-sneaks, humanity, le-frog, metroui, midnight, mint-choc, overcast, pepper-grinder, redmond, rocket, sam, smoothness, south-street, start, sunny, swanky-purse, trontastic, ui-darkness, ui-lightness, vader]" var="theme" itemLabel="" itemValue="" />
+            
+                                    <p:column>
+                                        <h:outputText styleClass="ui-theme ui-theme-" style="display-block" />
+                                    </p:column>
+            
+                                    <p:column>
+            
+                                    </p:column>
+                                </p:themeSwitcher>-->
+            <br/>
+            <p:themeSwitcher value="#{userPreferences.selectedTheme}"
+                             style="width:180px" var="theme">
+                <f:selectItem itemLabel="Select Theme" itemValue="" />
+                <f:selectItems value="#{userPreferences.themes}" var="t"
+                               itemLabel="#{t.name}" itemValue="#{t}"/>
+                <p:ajax listener="#{userPreferences.saveUserTheme}"/>
+                <p:column>
+                    #{theme.displayName}
+                </p:column>
+                <p:column>
+                    <!--<p:graphicImage value="/resources/images/themes/{theme.name}"/>-->
+                </p:column>
+            </p:themeSwitcher>
 
-                </td>
-                <td width="40%" align="center">
-
-                </td>
-            </tr>
-        </table>  
+        </h:form>
     </h:body>
 </html>
