@@ -43,6 +43,10 @@
         <error-code>403</error-code>
         <location>/loginerror.xhtml</location>
     </error-page>
+    <context-param>
+        <param-name>javax.faces.WEBAPP_RESOURCES_DIRECTORY</param-name>
+        <param-value>/WEB-INF/resources</param-value>
+    </context-param>
 <!--    <security-constraint>
         <display-name>AdminConstraint</display-name>
         <web-resource-collection>

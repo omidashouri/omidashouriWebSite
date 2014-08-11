@@ -24,8 +24,18 @@
         </p:dialog>
         <br/>
         <p:commandButton value="View" icon="ui-icon-extlink"  onclick="PF('dlg').show()"/>
+       
+         <br/>
+        <img src="#{resource['imagesw:asho.jpg']}" alt="web-INF"/>
+        <br/>
+        <p:graphicImage library="imagesw" name="asho.jpg"/>
+        <br/>
+        <img src="#{resource['imagesm:as.jpg']}" alt="Meta-INF"/>
+        <br/>
+        <h:graphicImage library="imagesm" name="as.jpg"/>
+         <h:outputText id="tt" value="#{msg['user.id']}"/>
         </h:form>
-        <img src="ashouri.jpg" alt=""/>
+        <!--<img src="ashouri.jpg" alt=""/>-->
 <!--        <h:graphicImage library="default" name="" />
         <img src="/resources/image/ashouri.jpg" alt=""/>-->
     </h:body>
