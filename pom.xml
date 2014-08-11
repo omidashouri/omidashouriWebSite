@@ -81,6 +81,13 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>ir.omidashouri</groupId>
+            <artifactId>persiancalender</artifactId>
+            <version>12.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/PersianCalendar-12.0.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
@@ -131,7 +138,7 @@
                 </executions>
             </plugin>
         </plugins>
-<!--        <resources>
+        <!--        <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <targetPath>${project.build.outputDirectory}/resources</targetPath>

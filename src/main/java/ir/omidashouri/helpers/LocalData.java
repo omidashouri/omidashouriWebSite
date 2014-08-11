@@ -14,6 +14,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ValueChangeEvent;
 import javax.inject.Named;
+import org.primefaces.context.PrimeFacesContext;
 
 /**
  *
@@ -30,9 +31,10 @@ public class LocalData implements Serializable{
    static{
       countries = new LinkedHashMap<String,Object>();
       countries.put("English", Locale.ENGLISH);
-      countries.put("Persian", Locale.FRANCE);
+      countries.put("Persian", Locale.FRENCH);
    }
 
+    
    public Map<String, Object> getCountries() {
       return countries;
    }
