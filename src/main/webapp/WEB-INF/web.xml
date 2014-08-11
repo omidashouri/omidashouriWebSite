@@ -43,6 +43,7 @@
         <error-code>403</error-code>
         <location>/loginerror.xhtml</location>
     </error-page>
+    <!--Add this part to Specify the resources in WEB-INF-->
     <context-param>
         <param-name>javax.faces.WEBAPP_RESOURCES_DIRECTORY</param-name>
         <param-value>/WEB-INF/resources</param-value>
