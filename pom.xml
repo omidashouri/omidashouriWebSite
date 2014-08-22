@@ -13,6 +13,8 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hibernate.version>4.3.6.Final</hibernate.version>
+        <guava.version>17.0</guava.version>
+        <primefaces.extensions.version>2.0.0</primefaces.extensions.version>
     </properties>
     
     <dependencies>
@@ -39,7 +41,7 @@
         <dependency>
             <groupId>org.primefaces.extensions</groupId>
             <artifactId>primefaces-extensions</artifactId>
-            <version>1.0.0</version>
+            <version>${primefaces.extensions.version}</version>
         </dependency> 
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -55,7 +57,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>16.0.1</version>
+            <version>${guava.version}</version>
         </dependency>
         <dependency>
             <groupId>antlr</groupId>
