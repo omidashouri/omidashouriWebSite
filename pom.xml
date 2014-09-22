@@ -13,8 +13,9 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hibernate.version>4.3.6.Final</hibernate.version>
-        <guava.version>17.0</guava.version>
-        <primefaces.extensions.version>2.0.0</primefaces.extensions.version>
+        <guava.version>18.0</guava.version>
+        <primefaces.extensions.version>2.1.0</primefaces.extensions.version>
+        <glassfish.javax.faces>2.2.8-01</glassfish.javax.faces>
     </properties>
     
     <dependencies>
@@ -26,7 +27,7 @@
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.faces</artifactId>
-            <version>2.2.8</version>
+            <version>${glassfish.javax.faces}</version>
         </dependency>
         <dependency>
             <groupId>org.primefaces</groupId>
