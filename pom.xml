@@ -15,7 +15,7 @@
         <hibernate.version>4.3.6.Final</hibernate.version>
         <guava.version>18.0</guava.version>
         <primefaces.extensions.version>2.1.0</primefaces.extensions.version>
-        <glassfish.javax.faces>2.2.8-01</glassfish.javax.faces>
+        <glassfish.javax.faces>2.2.8-02</glassfish.javax.faces>
     </properties>
     
     <dependencies>
